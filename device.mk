@@ -113,6 +113,7 @@ PRODUCT_PACKAGES += \
     sensors.hal.tof \
     Snap
 
+<<<<<<< HEAD
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
@@ -122,6 +123,13 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service
 
 # Display
+=======
+#Dirac
+PRODUCT_PACKAGES += \
+     Dirac
+
+# Display/Graphics
+>>>>>>> 72957acf... op3: Introduce Dirac preferences
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
