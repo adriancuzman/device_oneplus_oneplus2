@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2017, The LineageOS Project
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,10 +19,11 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
-LOCAL_C_INCLUDES := \
-    system/core/base/include \
-    system/core/init
+LOCAL_C_INCLUDES := system/core/init
+LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
 LOCAL_SRC_FILES := init_oneplus2.cpp
 LOCAL_MODULE := libinit_oneplus2
+
+LOCAL_STATIC_LIBRARIES := libbase
 
 include $(BUILD_STATIC_LIBRARY)
